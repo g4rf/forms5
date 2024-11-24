@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+© 2022 Jan Kossick, post@jankossick.de, https://jankossick.de
+-->
+<html><head>
+    <title>Aufwandsentschädigung Übungsleitung</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/aufwandsentschaedigung_uebungsleitung.css" />
+</head><body>
+    <div class="hidden" id="options" data-form-id="reimbursement"></div>    
+    
+    <div class="no-print">
+        <a href="index.html">&laquo; Zurück zur Übersicht</a>
+        &nbsp;&#1645;&nbsp; <a href="#" id="impress">Impressum</a>
+        &nbsp;&#1645;&nbsp; <a href="#" id="privacy-policy">Datenschutzerklärung</a>
+    </div>
+    
+<div class="form">
+    <h1>Aufwandsentschädigung Übungsleitung</h1>
+    
+    <div id="save-data" class="no-print">
+        <label>
+            <input type="checkbox" data-key="save-data" />
+            <span><b>Speichere die eingegebenen Daten in diesem Browser.</b> Benutze
+            diese Funktion nicht auf öffentlichen Rechnern, da sonst andere
+            deine Daten einsehen können.</span>
+        </label>
+    </div>
+    
+    <label>
+        An: <span class="only-print recipient auto-fill strong"></span>
+        <input type="text" data-key="recipient" class="recipient auto-fill" />
+    </label>
+    
+    <div class="section applicant">
+        <h2>Zahlungsempfänger·in</h2>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="name" class="save-data" />
+            <span class="label">Name / Vorname</span>            
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="address" class="save-data" />    
+            <span class="label">Anschrift (Straße, Hausnummer, PLZ, Ort)</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="email" class="save-data" />                
+            <span class="label">E-Mail</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="telephone" class="save-data" />    
+            <span class="label">Telefon</span>            
+        </label>
+        
+        <h3>Bankverbindung</h3>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="depositor" class="save-data" />    
+            <span class="label">Kontoinhaber·in</span>            
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="iban" class="save-data" />
+            <span class="label">IBAN</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="bic" class="save-data" />  
+            <span class="label">BIC</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="bank" class="save-data" />                
+            <span class="label">Bank</span>
+        </label>
+    </div>
+    
+    <h2>Als Aufwandsentschädigung berechne ich:</h2>
+    <label>
+        <span class="only-print"></span>
+        <input type="text" data-key="amount" />                
+        <span class="label">Betrag in EUR</span>
+    </label>
+
+    <h2>Tätigkeit</h2>
+
+    <p>Hiermit bestätige ich, dass von mir folgende Tätigkeiten eigenverantwortlich
+        und ehrenamtlich ausgeführt wurden.</p>
+    
+    <p class="no-print">Möglich sind folgende Angaben:</p>
+    
+    <ul class="no-print">
+        <li>Übungsleitung</li>
+        <li>Ausbilder·in, Erzieher·in, Betreuer·in oder vergleichbare Leistung</li>
+        <li>künstlerische Tätigkeiten</li>
+        <li>Pflege alter, kranker oder behinderter Menschen</li>
+    </ul>
+    
+    <p class="no-print">Bitte ergänze zur Tätigkeit weitere konkretisierende
+        Angaben wie Projekt, Ort und anderes.</p>
+
+    <div class="flex-table">
+        <div class="jobs template">
+            <label class="date">
+                <span class="only-print"></span>
+                <input type="text" data-key="date" />                
+                <span class="label">Datum</span>
+            </label>
+            <label class="hours">
+                <span class="only-print"></span>
+                <input type="text" data-key="hours" />                
+                <span class="label">Stundenanzahl</span>
+            </label>
+            <label class="description">
+                <span class="only-print"></span>
+                <input type="text" data-key="description" />                
+                <span class="label">Tätigkeit, Projekt, Ort</span>
+            </label>
+        </div>
+        <!-- total -->
+        <div class="jobs permanent">
+            <label class="date">
+                <button class="add-job no-print">Zeile hinzufügen</button>
+            </label>
+        </div>
+    </div>
+
+    <p>Die Versteuerung der Einkünfte wird von mir eigenverantwortlich durchgeführt, 
+        ebenso die Erfüllung etwaiger sozialversicherungsrechtlicher Abgaben. Mir ist 
+        bewusst, dass der Übungsleiterfreibetrag nach §3 Nr. 26 EStG nur bis zu einer
+        Höhe von 3.000 EUR jährlich steuerfrei ist.</p>
+    
+    <div class="signbox">
+        <label class="locationdate">
+            <span class="linefield"></span>
+            <span class="label">Ort/Datum</span>
+        </label>
+        <label class="signature">
+            <span class="linefield"></span>
+            <span class="label">Unterschrift Antragssteller·in</span>
+        </label>
+    </div>
+    
+    <div class="print-area no-print">
+        <p>Das ausgefüllte Dokument bitte ausdrucken, unterschreiben und zum
+            Abrechnen einreichen.</p>
+        <button class="print-button">Drucken</button>
+    </div>
+    
+    <div class="footnote no-print">
+        <p>Erstellt von <a href="https.//jankossick.de">Jan Kossick</a>.</p>
+    </div>
+    
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/localforage-1.7.3.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/aufwandsentschaedigung_uebungsleitung.js"></script>    
+</div></body></html>

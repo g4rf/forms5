@@ -1,0 +1,33 @@
+/*
+ * © 2018 Jan Kossick, jankossick@online.de, https://jankossick.de
+ */
+.jobs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.jobs label {
+  margin: 0 1mm;
+}
+.jobs .date,
+.jobs .hours {
+  flex-basis: 20%;
+}
+.jobs .description {
+  flex-basis: 60%;
+}
+@media print {
+  .applicant {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 0;
+    justify-items: stretch;
+    align-items: end;
+    justify-content: stretch;
+  }
+  .applicant h2,
+  .applicant h3 {
+    grid-column: span 2;
+  }
+}

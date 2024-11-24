@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+© 2022 Jan Kossick, post@jankossick.de, https://jankossick.de
+-->
+<html><head>
+    <title>Fahrtkostenerstattung</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/fahrtkostenerstattung.css" />
+</head><body>
+    <div class="hidden" id="options" data-form-id="reimbursement"></div>    
+    
+    <div class="no-print">
+        <a href="index.html">&laquo; Zurück zur Übersicht</a>
+        &nbsp;&#1645;&nbsp; <a href="#" id="impress">Impressum</a>
+        &nbsp;&#1645;&nbsp; <a href="#" id="privacy-policy">Datenschutzerklärung</a>
+    </div>
+    
+<div class="form">
+    <h1>Antrag auf Fahrtkostenerstattung</h1>
+    
+    <div id="save-data" class="no-print">
+        <label>
+            <input type="checkbox" data-key="save-data" />
+            <span><b>Speichere die eingegebenen Daten in diesem Browser.</b> Benutze
+            diese Funktion nicht auf öffentlichen Rechnern, da sonst andere
+            deine Daten einsehen können.</span>
+        </label>
+    </div>
+    
+    <label>
+        An: <span class="only-print recipient auto-fill strong"></span>
+        <input type="text" data-key="recipient" class="recipient auto-fill" />
+    </label>
+
+    <div class="section applicant">
+        <h2>Antragssteller*in & Zahlungsempfänger*in</h2>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="name" class="save-data" />
+            <span class="label">Name / Vorname</span>            
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="address" class="save-data" />    
+            <span class="label">Anschrift (Straße Hausnummer, PLZ Ort)</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="email" class="save-data" />                
+            <span class="label">E-Mail</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="telephone" class="save-data" />    
+            <span class="label">Telefon</span>            
+        </label>
+        
+        <h3>Bankverbindung</h3>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="depositor" class="save-data" />    
+            <span class="label">Kontoinhaber*in</span>            
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="iban" class="save-data" />
+            <span class="label">IBAN</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="bic" class="save-data" />  
+            <span class="label">BIC</span>
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="bank" class="save-data" />                
+            <span class="label">Bank</span>
+        </label>
+    </div>
+    
+    <div class="section project">
+        <h3>Projektzugehörigkeit</h3>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="project" class="save-data" />    
+            <span class="label">Projekt</span>            
+        </label>
+        <label>
+            <span class="only-print"></span>
+            <input type="text" data-key="subproject" class="save-data" />                
+            <span class="label">Teilprojekt</span>
+        </label>
+    </div>
+    
+    <div class="section">
+        <h3>Bus, Bahn, Schiff, Taxi etc.</h3>
+        <p class="no-print">
+            Für alle entstandenen Kosten bitte unbedingt die <u>Originalbelege</u>,
+            ggf. aufgeklebt mit Klebestift (kein Tackern oder Klebestreifen) auf DIN A4-Papier,
+            beifügen. Thermobelege bitte kopieren und mit den Originalbelegen einreichen.
+        </p>
+        
+        <!-- Bus, Bahn, Schiff, Taxi -->
+        <p class="no-trip only-print italic">Keine Fahrten</p>
+        <div class="trip template">
+            <label class="date">
+                <span class="only-print"></span>
+                <input type="text" data-key="date" />                
+                <span class="label">Datum</span>
+            </label>
+            <label class="company">
+                <span class="only-print"></span>
+                <input type="text" data-key="company" />                
+                <span class="label">Unternehmen</span>
+            </label>
+            <label class="start">
+                <span class="only-print"></span>
+                <input type="text" data-key="start" />                
+                <span class="label">Start</span>
+            </label>
+            <label class="target">
+                <span class="only-print"></span>
+                <input type="text" data-key="target" />                
+                <span class="label">Ziel</span>
+            </label>
+            <label class="value">
+                <span class="only-print"></span>
+                <input type="text" data-key="value" class="right" />                
+                <span class="label">Betrag in €</span>
+            </label>
+        </div>
+        <div class="add-trip">
+            <button class="no-print">Fahrt hinzufügen</button>
+        </div>
+            
+        <!-- PKW -->
+        <h3>PKW</h3>
+        <p class="no-print">
+            Für die Abrechnung von PKW-Fahrten sind keine Tankquittungen 
+            erforderlich. Die Abrechnung erfolgt nach 
+            <a href="https://www.gesetze-im-internet.de/brkg_2005/__5.html" target="_new">§5 Bundesreisekostengesetz</a>,
+            also 0,20&nbsp;€ pro Kilometer und maximal 130,00&nbsp;€ pro Fahrt.
+        </p>
+        <p class="no-pkw only-print italic">Keine Fahrten</p>
+        <div class="pkw-row template">
+            <label class="date">
+                <span class="only-print"></span>
+                <input type="text" data-key="date" />                
+                <span class="label">Datum</span>
+            </label>
+            <label class="start">
+                <span class="only-print"></span>
+                <input type="text" data-key="start" />                
+                <span class="label">Start</span>
+            </label>
+            <label class="target">
+                <span class="only-print"></span>
+                <input type="text" data-key="target" />                
+                <span class="label">Ziel</span>
+            </label>
+            <label class="pkw-km">
+                <span class="right only-print"></span>
+                <input type="text" class="right" />
+                <span class="label right">Kilometer</span>
+            </label>
+            <label class="pkw-euro">
+                <span class="value only-print right"></span>
+                <input type="text" data-key="pkw-euro" class="right" readonly />
+                <span class="label right">Betrag in €</span>
+            </label>
+        </div>
+        <div class="add-pkw">
+            <button class="no-print">PKW-Fahrt hinzufügen</button>
+        </div>
+        
+        <div style="page-break-inside:avoid">
+            <h3>Gesamtsumme</h3>
+            <label class="value">
+                <span class="only-print strong right"></span>
+                <input type="text" class="strong right" />
+                <span class="label right strong">Betrag in €</span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="signbox">
+        <label class="locationdate">
+            <span class="linefield"></span>
+            <span class="label">Ort/Datum</span>
+        </label>
+        <label class="signature">
+            <span class="linefield"></span>
+            <span class="label">Unterschrift Antragssteller*in</span>
+        </label>
+    </div>
+    
+    <div class="print-area no-print">
+        <p>Das ausgefüllte Dokument bitte ausdrucken, unterschreiben und zum
+            Abrechnen einreichen.</p>
+        <button class="print-button">Drucken</button>
+    </div>
+    
+    <div class="footnote no-print">
+        <p>Erstellt von <a href="https.//jankossick.de">Jan Kossick</a>.</p>
+    </div>
+    
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/localforage-1.7.3.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/fahrtkostenerstattung.js"></script>    
+</div></body></html>
