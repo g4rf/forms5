@@ -105,11 +105,16 @@ h1,h2,h3 {
 }
 
 @media screen {
-    input {
+    input, textarea {
         border: none;
         border-bottom: solid 1px #555;
         background: #eee;
         font-size: 12pt;
+    }
+    
+    textarea {
+        height: 80pt;
+        resize: vertical;
     }
     
     input[readonly] {
@@ -142,7 +147,7 @@ h1,h2,h3 {
         .label {
             display: block;
         }
-        input {
+        input, textarea {
             display: block;
             width: 100%;
             margin: 5px 0 0 0;
@@ -179,7 +184,7 @@ h1,h2,h3 {
 }
 
 @media print {
-    input {
+    input, textarea {
         display: none;
     }
     
@@ -195,7 +200,10 @@ h1,h2,h3 {
     h3, h4 {
         margin: 2mm 0 0 0;
     }
-    h1 { font-size: 13pt; }
+    h1 { 
+        font-size: 13pt;
+        margin-bottom: 5mm;
+    }
     h2 { font-size: 12pt; }
     h3 { font-size: 11pt; }
     h4 { font-size: 10pt; }
@@ -215,8 +223,7 @@ h1,h2,h3 {
         }
         
         span.recipient {
-            display: inline-block;
-            margin: 5mm 0;
+            margin-bottom: 5mm;
         }
     }
     

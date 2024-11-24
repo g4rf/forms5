@@ -99,11 +99,16 @@ h3 {
   color: #555;
 }
 @media screen {
-  input {
+  input,
+  textarea {
     border: none;
     border-bottom: solid 1px #555;
     background: #eee;
     font-size: 12pt;
+  }
+  textarea {
+    height: 80pt;
+    resize: vertical;
   }
   input[readonly] {
     background: #fff;
@@ -128,7 +133,8 @@ h3 {
   label .label {
     display: block;
   }
-  label input {
+  label input,
+  label textarea {
     display: block;
     width: 100%;
     margin: 5px 0 0 0;
@@ -159,7 +165,8 @@ h3 {
   }
 }
 @media print {
-  input {
+  input,
+  textarea {
     display: none;
   }
   .no-print {
@@ -176,6 +183,7 @@ h3 {
   }
   h1 {
     font-size: 13pt;
+    margin-bottom: 5mm;
   }
   h2 {
     font-size: 12pt;
@@ -199,8 +207,7 @@ h3 {
     margin-top: 1mm;
   }
   label span.recipient {
-    display: inline-block;
-    margin: 5mm 0;
+    margin-bottom: 5mm;
   }
   .section {
     padding: 0 2mm 2mm 2mm;
